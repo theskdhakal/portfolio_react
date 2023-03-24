@@ -5,13 +5,13 @@ export const Header = () => {
     <nav class="primary-header flex">
       <div class="logo">
         <h1>
-          [<span>SK</span>/]
+          [<span>SK</span>]
         </h1>
       </div>
 
       <div class="menu">
         <input type="checkbox" id="check" />
-        <label for="check" class="menu-icon">
+        <label htmlFor="check" class="menu-icon">
           <i class="fa-solid fa-bars"></i>
         </label>
         <ul class="navigation flex">
