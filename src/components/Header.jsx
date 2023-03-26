@@ -5,7 +5,7 @@ export const Header = () => {
     <nav class="primary-header flex">
       <div class="logo">
         <h1>
-          [<span>SK</span>]
+          [<span>SK:Developer</span>]
         </h1>
       </div>
 
