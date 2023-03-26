@@ -8,77 +8,27 @@ import { Projects } from "./components/Projects";
 import { Skills } from "./components/Skills";
 import "./style.css";
 
+import { Routes, Route } from "react-router-dom";
+
 function App() {
   return (
     <>
-      {/* <!-- dark mode button  --> */}
       <input type="checkbox" id="darkmode" class="dark-mode-checkbox" />
       <div class="wrapper">
         <label htmlFor="darkmode">
           <i class="fa fa-toggle-on dark-mode-toggle" aria-hidden="true"></i>
         </label>
 
-        {/* <!-- header --> */}
         <Header />
 
-        {/* <!-- hero section  --> */}
-        <Hero />
+        <Routes>
+          <Route path="/" element={<Hero />} />
+          <Route path="skills" element={<Skills />} />
+          <Route path="projects" element={<Projects />} />
+          <Route path="about" element={<About />} />
+          <Route path="contact" element={<Contact />} />
+        </Routes>
 
-        {/* <!-- banner section 
-        <section class="section2">
-          <div class="info-container flex">
-            <div class="info-lists flex">
-              <div class="info-content flex">
-                <div class="icon-container flex">
-                  <i class="fa-solid fa-award"></i>
-                </div>
-
-                <span>
-                  <h5>BIT</h5>
-                  <p>Graduate</p>
-                </span>
-              </div>
-              <div class="info-divider"></div>
-
-              <div class="info-content flex">
-                <div class="icon-container flex">
-                  <i class="fa-solid fa-award"></i>
-                </div>
-
-                <span>
-                  <h5>5+ Project</h5>
-                  <p>Completed</p>
-                </span>
-              </div>
-              <div class="info-divider"></div>
-
-              <div class="info-content flex">
-                <div class="icon-container flex">
-                  <i class="fa-solid fa-award"></i>
-                </div>
-
-                <span>
-                  <h5>1+ year</h5>
-                  <p>Job experience</p>
-                </span>
-              </div>
-            </div>
-          </div>
-        </section>{" "} */}
-
-        {/* <!-- skill section  --> */}
-        <Skills />
-
-        {/* <!-- project section  --> */}
-        <Projects />
-
-        {/* <!-- About section  --> */}
-        <About />
-
-        {/* <!-- contact-section  --> */}
-        <Contact />
-
-        {/* <!-- footer  --> */}
         <Footer />
       </div>
     </>
