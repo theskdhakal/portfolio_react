@@ -1,22 +1,32 @@
 import React from "react";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
+import { useState } from "react";
+import { createContext } from "react";
+import ReactSwitch from "react-switch";
+export const ThemeContext = createContext(null);
 
 export const Layout = ({ children }) => {
+  const [theme, setTheme] = useState("light");
+
+  const toggleTheme = () => {
+    setTheme((curr) => (curr === "light" ? "dark" : "light"));
+  };
   return (
-    <>
-      <input type="checkbox" id="darkmode" class="dark-mode-checkbox" />
-      <div class="wrapper">
-        <label htmlFor="darkmode">
-          <i class="fa fa-toggle-on dark-mode-toggle" aria-hidden="true"></i>
-        </label>
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
+      <>
+        <div class="wrapper" id={theme}>
+          <Header />
 
-        <Header />
+          <div className="toggler">
+            <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
+          </div>
 
-        {children}
+          {children}
 
-        <Footer />
-      </div>
-    </>
+          <Footer />
+        </div>
+      </>
+    </ThemeContext.Provider>
   );
 };

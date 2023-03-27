@@ -17,29 +17,21 @@
   --dark-border-color: #fff;
 }
 
-.dark-mode-checkbox:checked ~ .wrapper {
+#dark {
   --background-bg: var(--dark-bg);
   --text-color: var(--dark-text-color);
   --link-color: var(--darl-link-color);
   --border-color: var(--dark-border-color);
 }
 
-#darkmode {
-  position: fixed;
-  top: 0.2rem;
-  right: 1rem;
-  display: none;
-}
-
-.dark-mode-toggle {
-  position: fixed;
-  top: 0.2rem;
-  right: 1rem;
-  cursor: pointer;
-  color: var(--text-color);
-}
-.dark-mode-toggle:hover {
-  transform: scale(1.4);
+.toggler {
+  background: var(--background-bg);
+  position: sticky;
+  top: 4rem;
+  left: 0;
+  display: flex;
+  justify-content: end;
+  align-items: end;
 }
 
 ul {
@@ -73,9 +65,11 @@ body {
 .primary-header {
   justify-content: space-between;
   align-items: center;
-  margin: auto;
   padding: 1rem 2rem;
   background: var(--background-bg);
+  top: 0;
+  left: 0;
+  width: 100%;
 }
 .primary-header .logo h1 {
   font-size: 1.8rem;
@@ -116,6 +110,7 @@ body {
     position: fixed;
     left: 100%;
     top: 4.5rem;
+    gap: 1rem;
     transition: 0.5s ease-in-out;
   }
   .primary-header .menu .navigation li {
@@ -158,6 +153,7 @@ body {
   font-size: 50px;
   font-weight: bold;
   color: rgb(227, 60, 22);
+  animation: pulse 3s ease-in-out infinite;
 }
 @media (width <= 1024px) {
   .hero .text h1 {
@@ -176,6 +172,9 @@ body {
   }
 }
 @media (width <= 480px) {
+  .hero {
+    height: 80vh;
+  }
   .hero .text {
     position: absolute;
     top: 20%;
@@ -189,12 +188,16 @@ body {
   }
 }
 
+.section2 {
+  padding: 3rem 0;
+  background: var(--background-bg);
+}
 .section2 .info-container {
   margin: auto;
   padding: 2rem;
   max-width: 85%;
   min-height: 7rem;
-  border: 2px solid #2a2a2a;
+  border: 2px solid var(--border-color);
   border-radius: 100px;
   justify-content: center;
   align-items: center;
@@ -222,10 +225,11 @@ body {
 
 .section2 .info-container .info-content span h5 {
   letter-spacing: 2px;
+  color: var(--text-color);
 }
 
 .section2 .info-container .info-content span p {
-  color: goldenrod;
+  color: var(--text-color);
 }
 
 .section2 .info-container .info-divider {
@@ -235,32 +239,42 @@ body {
 }
 
 .skills-container {
-  height: 30vh;
+  min-height: 90vh;
+  display: flex;
   gap: 6rem;
-  justify-content: center;
+  justify-content: start;
+  padding-top: 5rem;
   background: var(--background-bg);
-  position: relative;
   overflow: hidden;
   width: 100%;
+  flex-direction: column;
+  align-items: center;
 }
 .skills-container h1 {
   color: var(--text-color);
-  padding-left: 60rem;
   text-decoration: underline;
   text-align: center;
 }
-.skills-container div {
-  margin-top: 50px;
+.skills-container .skills {
+  padding: 0 5rem;
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+  flex-wrap: wrap;
+}
+.skills-container .skills div {
   flex-direction: column;
+  justify-content: center;
   align-items: center;
   font-weight: 700;
   position: relative;
-  animation: scroll 10s linear infinite;
+  opacity: 1;
+  animation: bounce 2s infinite;
 }
-.skills-container div span {
+.skills-container .skills div span {
   color: var(--text-color);
 }
-.skills-container div .icons {
+.skills-container .skills div .icons {
   height: 80px;
   width: 80px;
   cursor: pointer;
@@ -300,9 +314,14 @@ body {
   padding: 3rem 2rem 0 2rem;
   gap: 2.5rem;
   justify-content: space-between;
-  grid-template-columns: repeat(auto-fit, minmax(400px, auto));
+  grid-template-columns: repeat(auto-fit, minmax(350px, auto));
 }
 @media (width <= 1024px) {
+  .section4 .project-container {
+    justify-content: center;
+  }
+}
+@media (width <= 480px) {
   .section4 .project-container {
     justify-content: center;
   }
@@ -340,6 +359,7 @@ body {
   overflow-x: hidden;
   z-index: -1;
   padding-top: 5rem;
+  min-height: 90vh;
 }
 .about .title {
   text-align: center;
@@ -436,6 +456,9 @@ body {
   .about .about-container .left {
     margin-left: 0;
   }
+  .about .about-container .left .bg {
+    left: 6.5rem;
+  }
   .about .interest .interest-card .box {
     flex-direction: column;
   }
@@ -444,13 +467,15 @@ body {
   }
 }
 @media (width <= 480px) {
+  .about .about-container {
+    padding-top: 4rem;
+  }
   .about .about-container .left .bg {
-    height: 60px;
-    width: 60px;
+    display: none;
   }
   .about .about-container .left img {
-    width: 80%;
-    padding-left: 3rem;
+    width: 100%;
+    padding-left: 2rem;
   }
   .about .interest .interest-card {
     width: 70%;
@@ -628,6 +653,9 @@ body {
 footer {
   background: #232323;
   color: white;
+  position: sticky;
+  width: 100%;
+  z-index: 999;
 }
 
 footer .footer-container {
@@ -844,11 +872,25 @@ footer .footer-container .footer-bottom {
     left: 10vw;
   }
 }
-@keyframes scroll {
+@keyframes pulse {
   0% {
-    transform: translateX(-100vw);
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
   }
   100% {
-    transform: translateX(100vw);
+    transform: scale(1);
+  }
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }/*# sourceMappingURL=style.css.map */
