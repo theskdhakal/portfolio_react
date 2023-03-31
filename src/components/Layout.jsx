@@ -18,9 +18,7 @@ export const Layout = ({ children }) => {
         <div class="wrapper" id={theme}>
           <Header />
 
-          <div className="toggler">
-            <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
-          </div>
+          <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
 
           {children}
 

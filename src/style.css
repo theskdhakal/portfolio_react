@@ -24,16 +24,6 @@
   --border-color: var(--dark-border-color);
 }
 
-.toggler {
-  background: var(--background-bg);
-  position: sticky;
-  top: 4rem;
-  left: 0;
-  display: flex;
-  justify-content: end;
-  align-items: end;
-}
-
 ul {
   list-style: none;
 }
