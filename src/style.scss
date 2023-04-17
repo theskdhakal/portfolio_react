@@ -12,6 +12,7 @@
   --color-yellow: yellow;
   --border-color: rgb(3, 3, 3);
   --text-color: rgb(13, 12, 12);
+  --background-image: url(./Asset/light.gif);
 
   //dark mode
   --dark-bg: var(--color-dark);
@@ -25,6 +26,7 @@
   --text-color: var(--dark-text-color);
   --link-color: var(--darl-link-color);
   --border-color: var(--dark-border-color);
+  --background-image: url(./Asset/dark.gif);
 }
 
 ul {
@@ -135,14 +137,10 @@ body {
 .hero {
   margin: 0;
   padding: 0;
-  background: var(--background-bg);
-  overflow-x: hidden;
+  background: var(--background-image) center center no-repeat;
+  background-size: cover;
+  height: 80vh;
   position: relative;
-
-  video {
-    width: 100vw;
-    border: none;
-  }
 
   .text {
     position: absolute;
@@ -578,7 +576,7 @@ body {
         color: var(--text-color);
         font-size: 80px;
 
-        animation: move1 6s ease-out 2s infinite normal both;
+        animation: move1 6s ease-out infinite normal both;
       }
 
       .fa-linkedin {
@@ -587,7 +585,7 @@ body {
         left: 35vw;
         font-size: 80px;
 
-        animation: move2 6s ease-out 2s infinite normal both;
+        animation: move2 6s ease-out infinite normal both;
       }
 
       .fa-facebook {
@@ -596,7 +594,7 @@ body {
         left: 35vw;
         font-size: 80px;
 
-        animation: move3 6s ease-out 2s infinite normal both;
+        animation: move3 6s ease-out infinite normal both;
       }
 
       .fa-twitter {
@@ -605,7 +603,7 @@ body {
         left: 20vw;
         font-size: 80px;
 
-        animation: move4 6s ease-out 2s infinite normal both;
+        animation: move4 6s ease-out infinite normal both;
       }
       .fa-instagram {
         position: absolute;
@@ -613,7 +611,7 @@ body {
         left: 10vw;
         font-size: 80px;
 
-        animation: move5 6s ease-out 2s infinite normal both;
+        animation: move5 6s ease-out infinite normal both;
       }
     }
     .socials i {

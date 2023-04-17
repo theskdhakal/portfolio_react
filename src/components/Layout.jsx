@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Footer } from "./Footer";
 import { Header } from "./Header";
 import { useState } from "react";
@@ -7,8 +7,12 @@ import ReactSwitch from "react-switch";
 export const ThemeContext = createContext(null);
 
 export const Layout = ({ children }) => {
-  const [theme, setTheme] = useState("light");
+  const savedTheme = localStorage.getItem("theme");
+  const [theme, setTheme] = useState(savedTheme || "light");
 
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
   const toggleTheme = () => {
     setTheme((curr) => (curr === "light" ? "dark" : "light"));
   };
@@ -17,11 +21,9 @@ export const Layout = ({ children }) => {
       <>
         <div class="wrapper" id={theme}>
           <Header />
-
           <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
 
           {children}
-
           <Footer />
         </div>
       </>
