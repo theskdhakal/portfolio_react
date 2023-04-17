@@ -56,6 +56,14 @@ export const Skills = () => {
             <img src={figma} alt="" class="icons" />
             <span>Figma</span>
           </div>
+          <div class="flex">
+            <img src={figma} alt="" class="icons" />
+            <span>Figma</span>
+          </div>
+          <div class="flex">
+            <img src={figma} alt="" class="icons" />
+            <span>Figma</span>
+          </div>
         </div>
       </div>
     </Layout>

@@ -1,12 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Resume from "../Asset/Resume.docx";
 
 export const Header = () => {
   return (
     <nav class="primary-header flex">
       <div class="logo">
         <h1>
-          [<span>SK</span>/]
+          &#123; <span>SK</span> &#125;
         </h1>
       </div>
 
@@ -32,6 +33,15 @@ export const Header = () => {
             <Link to="/contact">Contact</Link>
           </li>
         </ul>
+      </div>
+
+      <div className="download">
+        <button onClick={() => window.open(Resume)}>
+          Download CV{" "}
+          <span>
+            <i class="fa-solid fa-download"></i>
+          </span>
+        </button>
       </div>
     </nav>
   );

@@ -12,10 +12,16 @@
   --border-color: rgb(3, 3, 3);
   --text-color: rgb(13, 12, 12);
   --background-image: url(./Asset/light.gif);
+  --button-color: rgb(236, 227, 227);
+  --hero-color: rgb(10, 116, 155);
+  --margin-color: rgba(130, 127, 127, 0.2);
   --dark-bg: var(--color-dark);
   --dark-text-color: white;
   --dark-link-color: var(--color-yellow);
   --dark-border-color: #fff;
+  --dark-button-color: rgb(36, 34, 34);
+  --dark-hero-color: rgb(146, 137, 137);
+  --dark-margin-color: rgb(0, 0, 0);
 }
 
 #dark {
@@ -24,6 +30,9 @@
   --link-color: var(--darl-link-color);
   --border-color: var(--dark-border-color);
   --background-image: url(./Asset/dark.gif);
+  --button-color: var(--dark-button-color);
+  --hero-color: var(--dark-hero-color);
+  --margin-color: var(--dark-margin-color);
 }
 
 ul {
@@ -63,12 +72,14 @@ body {
 
 .primary-header {
   justify-content: space-between;
+  margin-bottom: 6px;
   align-items: center;
   padding: 1rem 2rem;
   background: var(--background-bg);
   top: 0;
   left: 0;
   width: 100%;
+  box-shadow: 5px 0px 5px 5px var(--margin-color);
 }
 .primary-header .logo h1 {
   font-size: 1.8rem;
@@ -92,6 +103,15 @@ body {
 }
 .primary-header .menu .navigation li a:hover {
   color: brown;
+}
+.primary-header .download button {
+  color: var(--text-color);
+  border-radius: 7px;
+  font-weight: bolder;
+  box-shadow: #2a2a2a;
+  cursor: pointer;
+  border: 1px solid var(--border-color);
+  background: var(--button-color);
 }
 @media (width <= 768px) {
   .primary-header .menu {
@@ -118,6 +138,9 @@ body {
   .primary-header .menu #check:checked ~ ul {
     left: calc(100% - 15rem);
   }
+  .primary-header .download {
+    display: none;
+  }
 }
 @media (width <= 480px) {
   .primary-header .logo h1 {
@@ -142,7 +165,7 @@ body {
 .hero .text h1 {
   font-size: 100px;
   font-weight: bold;
-  color: rgb(7, 150, 57);
+  color: var(--hero-color);
 }
 .hero .text p {
   text-align: center;
