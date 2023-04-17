@@ -35,6 +35,13 @@ body {
   line-height: 1.5;
 }
 
+.themeToggler {
+  position: fixed;
+  top: 5rem;
+  right: 1rem;
+  z-index: 1;
+}
+
 a {
   text-decoration: none;
   color: inherit;

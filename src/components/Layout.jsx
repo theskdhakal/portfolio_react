@@ -18,15 +18,14 @@ export const Layout = ({ children }) => {
   };
   return (
     <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      <>
-        <div class="wrapper" id={theme}>
-          <Header />
+      <div class="wrapper" id={theme}>
+        <Header />
+        <div className="themeToggler">
           <ReactSwitch onChange={toggleTheme} checked={theme === "dark"} />
-
-          {children}
-          <Footer />
         </div>
-      </>
+        {children}
+        <Footer />
+      </div>
     </ThemeContext.Provider>
   );
 };
