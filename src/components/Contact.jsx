@@ -1,6 +1,7 @@
 import React, { useRef } from "react";
 import point from "../Asset/point.png";
 import { Layout } from "./Layout";
+import { Link } from "react-router-dom";
 
 export const Contact = () => {
   const linkedinRef = useRef(null);
@@ -9,6 +10,11 @@ export const Contact = () => {
   const twitterRef = useRef(null);
   const instagramRef = useRef(null);
 
+  const email = "theskdhakal@gmail.com";
+
+  const handleEmailButtonClick = () => {
+    window.location.href = "mailto:${email}";
+  };
   const animatedElements = [
     linkedinRef,
     facebookRef,
@@ -47,11 +53,27 @@ export const Contact = () => {
               onMouseEnter={pauseAnimation}
               onMouseLeave={resumeAnimation}
             >
-              <i class="fa-brands fa-linkedin" ref={linkedinRef}></i>
-              <i class="fa-brands fa-facebook" ref={facebookRef}></i>
-              <i class="fa-brands fa-github" ref={githubRef}></i>
-              <i class="fa-brands fa-twitter" ref={twitterRef}></i>
-              <i class="fa-brands fa-instagram" ref={instagramRef}></i>
+              <Link to="https://www.linkedin.com/in/shiva-kumar-dhakal/">
+                <i class="fa-brands fa-linkedin" ref={linkedinRef}></i>
+              </Link>
+
+              <Link to="https://www.facebook.com/iamshivadhakal">
+                {" "}
+                <i class="fa-brands fa-facebook" ref={facebookRef}></i>
+              </Link>
+
+              <Link to="https://github.com/theskdhakal">
+                <i class="fa-brands fa-github" ref={githubRef}></i>
+              </Link>
+
+              <Link to="https://twitter.com/theskdhakal">
+                <i class="fa-brands fa-twitter" ref={twitterRef}></i>
+              </Link>
+
+              <Link to="https://www.instagram.com/thesk_dhakal/">
+                {" "}
+                <i class="fa-brands fa-instagram" ref={instagramRef}></i>
+              </Link>
             </div>
           </div>
 
@@ -60,10 +82,13 @@ export const Contact = () => {
             <div class="email-section flex">
               <p>Reach out over email</p>
               <div class="email">
-                <a href="mailto:theskdhakal@gmail.com">theskdhakal@gmail.com</a>
+                <a href="">Send E-mail</a>
 
                 <div class="send">
-                  <i class="fa-solid fa-paper-plane"></i>
+                  <i
+                    class="fa-solid fa-paper-plane"
+                    onClick={handleEmailButtonClick}
+                  ></i>
                 </div>
               </div>
             </div>

@@ -7,6 +7,8 @@ import firebase from "../Asset/firebase.png";
 import redux from "../Asset/redux.png";
 import bootstrap from "../Asset/bootstrap.png";
 import figma from "../Asset/figma.png";
+import sass from "../Asset/sass.png";
+import ts from "../Asset/ts.png";
 import { Layout } from "./Layout";
 
 export const Skills = () => {
@@ -57,12 +59,12 @@ export const Skills = () => {
             <span>Figma</span>
           </div>
           <div class="flex">
-            <img src={figma} alt="" class="icons" />
-            <span>Figma</span>
+            <img src={sass} alt="" class="icons" />
+            <span>Sass</span>
           </div>
           <div class="flex">
-            <img src={figma} alt="" class="icons" />
-            <span>Figma</span>
+            <img src={ts} alt="" class="icons" />
+            <span>TypeScript</span>
           </div>
         </div>
       </div>

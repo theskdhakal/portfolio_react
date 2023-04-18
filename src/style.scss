@@ -601,7 +601,7 @@ body {
     .socials {
       height: 70vh;
       gap: 8rem;
-      background-color: green;
+      // background-color: green;
       position: relative;
       cursor: pointer;
 
@@ -620,6 +620,7 @@ body {
         top: 55vh;
         left: 35vw;
         font-size: 80px;
+        color: rgb(55, 63, 183);
 
         animation: move2 6s ease-out infinite normal both;
       }
@@ -629,6 +630,7 @@ body {
         top: 35vh;
         left: 35vw;
         font-size: 80px;
+        color: #2416ec;
 
         animation: move3 6s ease-out infinite normal both;
       }
@@ -638,6 +640,7 @@ body {
         top: 15vh;
         left: 20vw;
         font-size: 80px;
+        color: rgb(70, 189, 236);
 
         animation: move4 6s ease-out infinite normal both;
       }
@@ -646,26 +649,10 @@ body {
         top: 35vh;
         left: 10vw;
         font-size: 80px;
+        color: rgb(202, 63, 191);
 
         animation: move5 6s ease-out infinite normal both;
       }
-    }
-    .socials i {
-      font-size: 3.8rem;
-    }
-    .socials i:nth-child(1) {
-      color: rgb(23, 65, 162);
-    }
-    .socials i:nth-child(2) {
-      color: rgb(31, 31, 151);
-    }
-    .socials i:nth-child(4) {
-      color: rgb(39, 166, 230);
-    }
-    .socials i:nth-child(5) {
-      color: rgb(180, 32, 180);
-      // background: white;
-      // background-color: white !important;
     }
 
     .new-right {
@@ -770,6 +757,20 @@ footer {
 
   width: 100%;
   z-index: 999;
+
+  .topLoader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    background: rgba(118, 101, 57, 0.688);
+    width: 5rem;
+    height: 5rem;
+    border-radius: 50%;
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+  }
 }
 footer .footer-container {
   max-width: 1440px;
