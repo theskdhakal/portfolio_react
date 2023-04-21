@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Resume from "../Asset/Resume.docx";
+import Resume from "../Asset/Resume.pdf";
 
 export const Header = () => {
   return (
