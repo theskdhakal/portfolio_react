@@ -242,10 +242,10 @@ body {
     }
   }
   @include mobile() {
-    height: 80vh;
+    // height: 80vh;
     .text {
       position: absolute;
-      top: 20%;
+      top: 40%;
       left: 45%;
       overflow-x: hidden;
 

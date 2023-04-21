@@ -207,12 +207,9 @@ body {
   }
 }
 @media (width <= 480px) {
-  .hero {
-    height: 80vh;
-  }
   .hero .text {
     position: absolute;
-    top: 20%;
+    top: 40%;
     left: 45%;
     overflow-x: hidden;
   }
