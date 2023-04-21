@@ -9,7 +9,7 @@ export const Footer = () => {
     });
   };
   return (
-    <footer>
+    <footer id="footers">
       <div class="footer-container flex">
         <div class="footer-top flex">
           <div class="flex">

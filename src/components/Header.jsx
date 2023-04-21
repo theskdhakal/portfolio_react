@@ -4,7 +4,7 @@ import Resume from "../Asset/Resume.pdf";
 
 export const Header = () => {
   return (
-    <nav class="primary-header flex">
+    <nav class="primary-header flex" id="headers">
       <div class="logo">
         <h1>
           &#123; <span>SK</span> &#125;
@@ -18,19 +18,19 @@ export const Header = () => {
         </label>
         <ul class="navigation flex">
           <li>
-            <a href="/">Home</a>
+            <a href="#headers">Home</a>
           </li>
           <li>
-            <a href=".skills-container">Skills</a>
+            <a href="#skills">Skills</a>
           </li>
           <li>
-            <a href="/projects">Projects</a>
+            <a href="#projects">Projects</a>
           </li>
           <li>
-            <a href="/about">About</a>
+            <a href="#abouts">About</a>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <a href="#contact">Contact</a>
           </li>
         </ul>
       </div>

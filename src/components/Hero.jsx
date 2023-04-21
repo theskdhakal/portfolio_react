@@ -4,7 +4,7 @@ import Resume from "../Asset/Resume.pdf";
 export const Hero = () => {
   return (
     <>
-      <section className="hero">
+      <section className="hero" id="heros">
         <div className="text">
           <h1>Shiva K. Dhakal</h1>
           <p>Web Developer</p>

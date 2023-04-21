@@ -7,7 +7,7 @@ import interest3 from "../Asset/interest3.jpg";
 export const About = () => {
   return (
     <>
-      <section class="about">
+      <section class="about" id="abouts">
         <h1 class="title">About Me</h1>
         <div class="about-container flex">
           <div class="left flex">

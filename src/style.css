@@ -48,7 +48,7 @@ body {
   position: fixed;
   top: 5rem;
   right: 2rem;
-  z-index: 1;
+  z-index: 999;
   overflow-x: hidden;
 }
 
@@ -77,6 +77,10 @@ body {
   align-items: center;
   padding: 1rem 2rem;
   background: var(--background-bg);
+  position: fixed;
+  top: 0;
+  z-index: 999;
+  width: 100%;
   box-shadow: 5px 0px 5px 5px var(--margin-color);
 }
 .primary-header .logo h1 {
@@ -368,6 +372,16 @@ body {
   border-radius: 1rem;
   border: 2px solid rgb(62, 123, 149);
 }
+.section4 .project-container .project-card .live {
+  display: none;
+}
+
+.section4 .project-container .project-card:hover .live {
+  display: block;
+}
+.section4 .project-container .project-card:hover .bottom {
+  display: none;
+}
 
 .section4 .project-container .project-card .top img {
   width: 100%;
@@ -415,6 +429,7 @@ body {
 .about .about-container .left {
   position: relative;
   margin-top: 8rem;
+  z-index: 100;
 }
 .about .about-container .left .bg {
   background: radial-gradient(circle, skyblue, goldenrod);
@@ -429,7 +444,7 @@ body {
 .about .about-container .left img {
   width: 100%;
   margin-top: -13rem;
-  z-index: 2;
+  z-index: 99;
 }
 .about .about-container .right {
   padding-top: 6rem;
@@ -484,7 +499,7 @@ body {
     text-align: center;
   }
   .about .about-container .left .bg {
-    left: 1rem;
+    left: 3.5rem;
   }
 }
 @media (width <= 768px) {
@@ -495,7 +510,7 @@ body {
     margin-left: 0;
   }
   .about .about-container .left .bg {
-    left: 6.5rem;
+    display: none;
   }
   .about .interest .interest-card .box {
     flex-direction: column;
@@ -639,6 +654,7 @@ body {
 @media (width <= 1024px) {
   .section6 .content .visual {
     left: 13rem;
+    top: 28rem;
   }
   .section6 .content .visual img {
     width: 8rem;
@@ -674,6 +690,11 @@ body {
   .section6 .content .new-right {
     flex-direction: column;
     gap: 3rem;
+  }
+}
+@media (width <= 480px) {
+  .section6 .content {
+    align-self: center;
   }
 }
 

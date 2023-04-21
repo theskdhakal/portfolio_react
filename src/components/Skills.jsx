@@ -13,7 +13,7 @@ import ts from "../Asset/ts.png";
 export const Skills = () => {
   return (
     <>
-      <div class="skills-container ">
+      <div class="skills-container " id="skills">
         <h1>Skills</h1>
 
         <div className="skills">
