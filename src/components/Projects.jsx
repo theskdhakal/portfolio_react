@@ -5,11 +5,10 @@ import project3 from "../Asset/project3.JPG";
 import project4 from "../Asset/project4.JPG";
 import project5 from "../Asset/project5.JPG";
 import project6 from "../Asset/project6.JPG";
-import { Layout } from "./Layout";
 
 export const Projects = () => {
   return (
-    <Layout>
+    <>
       <section class="section4 flex" id="projects">
         <h1 class="title">Recent Projects</h1>
 
@@ -71,6 +70,6 @@ export const Projects = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };

@@ -281,7 +281,7 @@ body {
   display: flex;
   gap: 6rem;
   justify-content: start;
-  padding-top: 5rem;
+  padding: 5rem 0;
   background: var(--background-bg);
   overflow: hidden;
   width: 100%;
@@ -318,18 +318,13 @@ body {
   cursor: pointer;
   position: relative;
 }
-@media (width <= 768px) {
-  .skills-container .skills-container {
-    gap: 4px;
-  }
-}
 @media (width <= 480px) {
-  .skills-container .skills-container {
-    gap: 1.5rem;
-    justify-content: center;
+  .skills-container .skills {
+    gap: 3rem;
   }
-  .skills-container div i {
-    width: 4rem;
+  .skills-container .skills div .icons {
+    height: 60px;
+    width: 60px;
   }
 }
 
@@ -338,7 +333,7 @@ body {
   justify-content: center;
   align-items: center;
   background: var(--background-bg);
-  padding: 2rem 0;
+  padding: 5rem 0;
   overflow: hidden;
 }
 .section4 h1 {
@@ -401,7 +396,7 @@ body {
   padding-bottom: 4rem;
   overflow-x: hidden;
   z-index: -1;
-  padding-top: 5rem;
+  padding: 5rem 0;
   min-height: 90vh;
 }
 .about .title {
@@ -535,6 +530,7 @@ body {
   flex-direction: column;
   background: var(--background-bg);
   overflow-x: hidden;
+  padding: 5rem 0;
 }
 .section6 h1 {
   text-decoration: underline;

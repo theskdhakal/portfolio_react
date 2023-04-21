@@ -3,11 +3,10 @@ import pic from "../Asset/pic.png";
 import interest1 from "../Asset/interest1.jpg";
 import interest2 from "../Asset/interest2.jpg";
 import interest3 from "../Asset/interest3.jpg";
-import { Layout } from "./Layout";
 
 export const About = () => {
   return (
-    <Layout>
+    <>
       <section class="about">
         <h1 class="title">About Me</h1>
         <div class="about-container flex">
@@ -78,6 +77,6 @@ export const About = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };

@@ -1,10 +1,9 @@
 import React from "react";
-import { Layout } from "./Layout";
 import Resume from "../Asset/Resume.pdf";
 
 export const Hero = () => {
   return (
-    <Layout>
+    <>
       <section className="hero">
         <div className="text">
           <h1>Shiva K. Dhakal</h1>
@@ -61,6 +60,6 @@ export const Hero = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };

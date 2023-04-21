@@ -1,6 +1,5 @@
 import React, { useRef } from "react";
 import point from "../Asset/point.png";
-import { Layout } from "./Layout";
 import { Link } from "react-router-dom";
 
 export const Contact = () => {
@@ -39,7 +38,7 @@ export const Contact = () => {
   };
 
   return (
-    <Layout>
+    <>
       <section className="section6 flex" id="contact">
         <h1 className="title">Contact</h1>
         <div className="content flex">
@@ -95,6 +94,6 @@ export const Contact = () => {
           </div>
         </div>
       </section>
-    </Layout>
+    </>
   );
 };

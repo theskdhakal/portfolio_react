@@ -9,11 +9,10 @@ import bootstrap from "../Asset/bootstrap.png";
 import figma from "../Asset/figma.png";
 import sass from "../Asset/sass.png";
 import ts from "../Asset/ts.png";
-import { Layout } from "./Layout";
 
 export const Skills = () => {
   return (
-    <Layout>
+    <>
       <div class="skills-container ">
         <h1>Skills</h1>
 
@@ -68,6 +67,6 @@ export const Skills = () => {
           </div>
         </div>
       </div>
-    </Layout>
+    </>
   );
 };
