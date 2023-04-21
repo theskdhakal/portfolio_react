@@ -217,15 +217,18 @@ body {
   }
 }
 
-.section2 .info-container {
-  margin: auto;
-  padding: 2rem;
-  max-width: 85%;
-  min-height: 7rem;
-  border: 2px solid #2a2a2a;
-  border-radius: 100px;
-  justify-content: center;
-  align-items: center;
+.section2 {
+  background: var(--background-bg);
+  .info-container {
+    margin: auto;
+    padding: 2rem;
+    max-width: 85%;
+    min-height: 7rem;
+    border: 2px solid #2a2a2a;
+    border-radius: 100px;
+    justify-content: center;
+    align-items: center;
+  }
 }
 .section2 .info-container .info-lists {
   width: 100%;

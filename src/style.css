@@ -189,6 +189,9 @@ body {
   }
 }
 
+.section2 {
+  background: var(--background-bg);
+}
 .section2 .info-container {
   margin: auto;
   padding: 2rem;
