@@ -1,5 +1,6 @@
 import React from "react";
 import { Layout } from "./Layout";
+import Resume from "../Asset/Resume.pdf";
 
 export const Hero = () => {
   return (
@@ -8,6 +9,15 @@ export const Hero = () => {
         <div className="text">
           <h1>Shiva K. Dhakal</h1>
           <p>Web Developer</p>
+
+          <div className="downloadResume">
+            <button onClick={() => window.open(Resume)}>
+              Download CV{" "}
+              <span>
+                <i class="fa-solid fa-download"></i>
+              </span>
+            </button>
+          </div>
         </div>
       </section>
 
